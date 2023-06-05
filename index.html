@@ -1,5 +1,12 @@
+youtubeのリンクを入力して置き換えを押すとyoutubeの動画が表示される。
+<form>
+<input type="text" id="myInput">
+<button type="button" onclick="myFunction()">置き換え</button>
+</form>
+<iframe src="0" id="k"></iframe>
 <script>
-var UserInput =prompt("youtube URL"); 
+function myFunction() {
+var UserInput = document.getElementById("myInput").value;
 var UserInput = UserInput.replace('watch?v=', 'embed/');
-window.location.href = UserInput;
+document.getElementById("k").src = UserInput;}
 </script>
