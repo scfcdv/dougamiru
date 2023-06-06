@@ -1,14 +1,28 @@
-<title>dougamiru</title>
+<title>動画見れる自作サイト</title>
 youtubeのリンクを入力して置き換えを押すとyoutubeの動画が表示される。
-<form action="http://www.google.co.jp/search" method="get"> <input type="hidden" name="hl" value="ja"> <input type="textbox" name="q" maxLength="255" size="30"> <input type="submit" name="btnG" value="Google 検索"> </form>
 <form>
-<input type="text" id="myInput">
-<button type="button" onclick="myFunction()">置き換え</button>
+<input type="text" id="myInput2">
+<button type="button" onclick="myFunction2()">動画検索</button>
 </form>
-<iframe src="0" id="k" width="640" height="360"></iframe>
+<script>
+function myFunction2() {
+var UserInput2 = document.getElementById("myInput2").value;
+var UserInput2 = ("https://www.google.co.jp/search?q="+UserInput2+"&hl=ja&sxsrf=APwXEddqDJWhvjixeYaIWoRiWwbkVb4GIA:1686042674955&source=lnms&tbm=vid&sa=X&ved=2ahUKEwjL2921pq7_AhWQNN4KHeZNAnMQ_AUoAXoECAEQAw");
+window.open(UserInput2, '_blank')}
+</script><form>
+<input type="text" id="myInput">
+<button type="button" onclick="myFunction()">置き換え</button><button type="button" onclick="god()">新しいタブで表示</button>
+</form>
+<iframe src="https://m-39892622.hubspotpagebuilder.com/ja-jp/home" id="k" width="1280" height="720"></iframe>
 <script>
 function myFunction() {
 var UserInput = document.getElementById("myInput").value;
 var UserInput = UserInput.replace('watch?v=', 'embed/');
 document.getElementById("k").src = UserInput;}
+</script>
+<script>
+function god(){
+var UserInput = document.getElementById("myInput").value;
+var UserInput = UserInput.replace('watch?v=', 'embed/');
+window.open(UserInput, '_blank')}
 </script>
