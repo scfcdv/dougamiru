@@ -4,7 +4,7 @@ youtubeのリンクを入力して置き換えを押すとyoutubeの動画が表
 <iframe src="https://www.google.com/?igu=1" width="640" height="360"></iframe>
 <form>
 <input type="text" id="myInput">
-<button type="button" onclick="myFunction()">置き換え</button><button type="button" onclick="god()">新しいタブで表示</button>
+<button type="button" onclick="myFunction()">置き換え</button><button type="button" onclick="god()">新しいタブで表示</button><button id="clearButton">消去</button>
 </form>
 <iframe src="https://m-39892622.hubspotpagebuilder.com/ja-jp/home" id="k" width="1280" height="720"></iframe>
 <script>
@@ -18,4 +18,10 @@ function god(){
 var UserInput = document.getElementById("myInput").value;
 var UserInput = UserInput.replace('watch?v=', 'embed/');
 window.open(UserInput, '_blank')}
+</script>
+<script>
+    // ボタンクリック時の処理を設定
+    document.getElementById("clearButton").addEventListener("click", function() {
+        document.getElementById("myInput").value = ""; // テキスト入力を空にする
+    });
 </script>
